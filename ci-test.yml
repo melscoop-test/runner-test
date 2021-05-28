@@ -1,0 +1,15 @@
+name: ci-test
+
+on: workflow_dispatch
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+
+steps:
+      - uses: actions/checkout@v2.3.4
+      - name: Git Hooks and Checks
+        run: |
+              lscpu 
+              free -h
+        
